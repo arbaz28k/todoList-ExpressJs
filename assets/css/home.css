@@ -1,0 +1,172 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body{
+    background-image: url(../images/bkg-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: top;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#container{
+    text-align: center;
+    width: 70%;
+    background-color:rgb(0, 51, 0, 0.2);
+}
+
+
+#heading{
+    display: inline-block;
+    width: 300px;
+    margin-top:10px;
+    background-color: bisque;
+    border-radius:15px;
+}
+
+.task{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    font-size: 30px;
+    font-weight: 700;
+    margin-left:10px;
+}
+
+
+input{
+    width: 120px;
+    height:30px;
+    margin:10px 5px;
+    background-color: beige;
+    color: black;
+    border-radius: 15px 15px;
+    padding:5px;
+    box-shadow: 6px 4px 6px black;
+
+}
+
+#description{
+    width:300px;
+}
+
+#category{
+    width: 120px;
+    height: 30px;
+    background-color: beige;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 15px;
+    margin-left: 5px;
+    box-shadow: 6px 4px 6px black;
+}
+option{
+    font-size: 15px;
+    font-weight:700;
+}
+
+button{
+    width:100px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius:15px;
+    background-color: rgb(58, 240, 89);
+    font-size:15px;
+    font-weight: 700;
+    box-shadow: 0px 4px 6px black;
+
+}
+
+button:hover{
+    background-color: rgb(37, 211, 66);;
+    color: aliceblue;
+}
+
+
+li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(255, 181, 254);
+    margin-top: 3px;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+li:hover{
+    background-color: rgb(249, 136, 247);
+}
+
+li:hover .delete-button a i{
+    visibility:visible;
+}
+
+.new-task{
+    width:80%;
+    height:100px;
+    margin: auto;
+}
+
+.details{
+    width:600px;
+    height:90px;
+}
+
+.details p{
+    font-size:20px;
+    font-weight:bold;
+    font-style:italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    margin:2px;
+    color: rgb(106, 44, 161);
+}
+
+#main{
+    font-size: 30px;
+    color: rgb(66, 31, 96);
+}
+
+#detail-category{
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: rgb(106, 44, 161);
+    height:30px;
+    width: 70px;
+    padding:10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -30px;
+    border-radius: 12px;
+}
+
+
+.delete-button{
+    margin: 30px 10px;
+    display: inline-block;
+}
+
+.delete-button a i{
+    color:red;
+    font-size: 30px;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.delete-button a i:hover{
+    color:rgb(217, 5, 5);
+    transition: 0.3s ease-in-out;
+}

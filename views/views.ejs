@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>
+            <%=title%>
+        </title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+
+    </head>
+    <body>
+        
+        <div id="container">
+
+        <div id="heading">
+            <h1>TODO LIST APP</h1>
+        </div>
+
+        <!-- Form Fill Section-->
+        <form action="/create-contact" method="POST">
+
+            <div class="task" >
+                <label for="description">Task</label>
+            <input type="text" name="plan" id="description" placeholder="Enter Your Task" required>
+
+            </div>
+            
+            <div class="task">
+    
+                <label for="category">Category</label>
+                <select name="category" id="category">
+                    <option>Personal</option>
+                    <option>Home</option>
+                    <option>Work</option>
+                    <option>School</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="time">Time</label>
+                <input type="time" name="time" id="time" required>
+    
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date">
+
+            </div>
+           
+
+            <button type="submit">ADD</button>
+
+        </form>
+
+        <!-- Fatching task-->
+        <div class="new-task">
+            <ul>
+                <%for(let i of schduleList){%>
+                    <li> 
+                        <div class="details">
+                            <p id="main"><%=i.plan%></p>
+                            <p><%=i.time%></p>
+                            <p><%=i.date%></p>  
+                        </div>
+                        <div id="detail-category">
+                            <p><%=i.category%></p>
+                        </div>
+                       
+                        <div class="delete-button">
+                            <a href="/delete-content/?id=<%= i._id%>">
+                                <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+                            </a>
+                        </div>
+                    </li>
+
+                <%}%>
+            </ul>
+        </div>
+
+    </div>
+
+        <script type="text/javascript" src="/js/home.js">
+
+        </script>
+
+        
+    </body>
+</html>
